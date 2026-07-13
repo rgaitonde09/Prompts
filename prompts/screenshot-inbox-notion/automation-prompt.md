@@ -89,14 +89,17 @@ Search the destination first to avoid obvious duplicates.
 Create one row per distinct media item.
 
 Status rules:
-- `To Watch` for films, shows, anime, documentaries, podcasts, music, and video games
+- `To Watch` for films, shows, anime, documentaries, and video games
 - `To Read` for books and comics
+- `To Listen` for music and audio-first items such as podcast episodes, DJ sets, mixes, albums, and tracks
 - `Maybe` is acceptable for board/card/tabletop games when intent is unclear
 
 Populate:
 - `Title`
 - `Media Type`
 - `Status`
+- `Access URL`
+- `Audiobook URL` for books and comics when an audiobook exists
 - `Wikipedia URL`
 - `Official URL`
 - `Available On`
@@ -107,15 +110,22 @@ Populate:
 - `Added Via Screenshot = __YES__`
 
 Link rules:
-- Books / comics: `Official URL` should be Audible or a publisher/store page
-- Music: use `Media Type = Music` when available and prefer Apple Music in `Official URL`
+- Books / comics:
+  `Access URL` should point to the best read/buy page, usually the publisher/store page.
+  `Audiobook URL` should point to Audible when available.
+  `Official URL` can be the publisher, author, or primary series page.
+- Music:
+  use `Media Type = Music` when available
+  prefer Apple Music or Spotify in `Access URL`
+  use `Official URL` for the artist, label, or release page when useful
 - Tabletop games / physical products: prefer Amazon or manufacturer page in `Official URL`
 
 Availability rules:
 - Streamable video titles must always get verified current U.S. streaming availability
 - If available on a subscribed service, say so explicitly
 - If unreleased or not currently streamable, say that explicitly
-- For books, use `Book / streaming availability not applicable.`
+- For books, use `Book / streaming availability not applicable.` and always try to add an `Audiobook URL`
+- For music, describe the listening platform explicitly, for example `Spotify (verified ...)`, `Apple Music (verified ...)`, or `YouTube full set (verified ...)`
 - For physical games/products, use `Physical product / streaming availability not applicable.` or `Tabletop game / streaming availability not applicable.`
 
 If a screenshot references both a book/comic and its adaptation, create the row for the thing most directly being recommended and mention the adaptation in the page body if helpful.
