@@ -6,6 +6,7 @@ This repository stores reusable prompt assets for the second-brain workflow.
 
 - `prompts/screenshot-inbox-notion/automation-prompt.md`
 - `prompts/screenshot-inbox-notion/replication-guide.md`
+- `guides/chatgpt-trip-itinerary-guide.md`
 
 ## Notes
 
